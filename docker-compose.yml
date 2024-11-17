@@ -1,0 +1,25 @@
+# Set the version of docker compose to use
+version: '3.9'
+
+# The containers that compose the project
+services:
+  dev-db:
+    image: postgres:13
+    restart: always
+    container_name: ethnoplatform-postgres
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: prisma
+      POSTGRES_DB: db
+  test-db:
+    image: postgres:13
+    restart: always
+    container_name: ethnoplatform-postgres-test
+    ports:
+      - '5436:5432'
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: prisma
+      POSTGRES_DB: db
