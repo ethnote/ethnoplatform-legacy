@@ -1,4 +1,4 @@
-# Ethnote Open Source
+# Ethnoplatform Legacy
 
 Please read [license](license.md) before using this code.
 
